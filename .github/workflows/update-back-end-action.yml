@@ -32,4 +32,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd home
-            touch file
+            git pull https://github.com/FadyAtefElyas/back-end-repo.git
+            php artisan migrate
